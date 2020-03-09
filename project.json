@@ -910,6 +910,54 @@
 		},
 		"/src/images/Heading.h": {
 			"sdcard": false
+		},
+		"/documents": {
+			"sdcard": false
+		},
+		"/documents/Pipes_Article3_Body.docx": {
+			"sdcard": false
+		},
+		"/documents/Pipes_Article3_Callouts.docx": {
+			"sdcard": false
+		},
+		"/documents/~$pes_Article3_Body.docx": {
+			"sdcard": false
+		},
+		"/documents/Pipes_Article3_Pokitto.bin.1.png": {
+			"sdcard": false
+		},
+		"/documents/Img1.png": {
+			"sdcard": false
+		},
+		"/documents/Img1.h": {
+			"sdcard": false
+		},
+		"/documents/Img2.png": {
+			"sdcard": false
+		},
+		"/documents/Pipes_Article3_Pokitto.bin.2.png": {
+			"sdcard": false
+		},
+		"/documents/Pipes_Article3_Pokitto.bin.3.png": {
+			"sdcard": false
+		},
+		"/documents/Img3.png": {
+			"sdcard": false
+		},
+		"/documents/Img4.png": {
+			"sdcard": false
+		},
+		"/documents/~$pes_Article3_Callouts.docx": {
+			"sdcard": false
+		},
+		"/documents/Img2.h": {
+			"sdcard": false
+		},
+		"/documents/Img4.h": {
+			"sdcard": false
+		},
+		"/documents/Img3.h": {
+			"sdcard": false
 		}
 	}
 }

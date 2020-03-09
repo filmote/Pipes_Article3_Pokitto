@@ -4,18 +4,18 @@
 
 
 #define NOTHING                      0
-#define PIPE_HORIZONTAL_LR           1
-#define PIPE_HORIZONTAL_RL           2
-#define PIPE_VERTICAL_TB             3
-#define PIPE_VERTICAL_BT             4
-#define PIPE_CORNER_TL               5
-#define PIPE_CORNER_LT               6
-#define PIPE_CORNER_TR               7
-#define PIPE_CORNER_RT               8
-#define PIPE_CORNER_BL               9
-#define PIPE_CORNER_LB               10
-#define PIPE_CORNER_BR               11
-#define PIPE_CORNER_RB               12
+#define CONNECTOR_HORIZONTAL_LR           1
+#define CONNECTOR_HORIZONTAL_RL           2
+#define CONNECTOR_VERTICAL_TB             3
+#define CONNECTOR_VERTICAL_BT             4
+#define CONNECTOR_CORNER_TL               5
+#define CONNECTOR_CORNER_LT               6
+#define CONNECTOR_CORNER_TR               7
+#define CONNECTOR_CORNER_RT               8
+#define CONNECTOR_CORNER_BL               9
+#define CONNECTOR_CORNER_LB               10
+#define CONNECTOR_CORNER_BR               11
+#define CONNECTOR_CORNER_RB               12
 #define NODE                         15
 
 #define GRID_WIDTH                   11

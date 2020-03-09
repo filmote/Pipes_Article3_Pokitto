@@ -20,16 +20,10 @@ int main() {
     cookie.begin("PIPES", sizeof(cookie), (char*)&cookie);
 
     PC::begin();
-//    PD::loadRGBPalette(P);   
     PD::persistence = true;
     PD::setInvisibleColor(0);
     PD::setFont(font3x5);
     PD::setColor(0);
-
-
-    // Kick off the random number generator ..
-    
-    srand(time(0));
 
 
     // Has the cookie been initialised?
@@ -49,7 +43,6 @@ int main() {
     
         if (!PC::update()) continue;
     
-        PC::sound.updateStream();
         game.loop();
     
     }

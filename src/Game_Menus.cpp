@@ -100,12 +100,12 @@ void Game::renderLevelDetail(byte x, byte y, byte level, byte highlight) {
 	  
   	PD::setColor(1);
   	PD::fillRect(x - 1, y - 1, MENU_LEVEL_SELECT_ITEM_WIDTH, MENU_LEVEL_SELECT_ITEM_HEIGHT);
-    PD::setColor(8, 0);
+    PD::setColor(8, 1);
 	  
   }
   else {
 
-    PD::setColor(4, 0);
+    PD::setColor(4, 8);
 
   }
 	
@@ -182,18 +182,23 @@ void Game::puzzleSelect() {
 	  
 	  if (puzzleSelect_selectedItem == 1) {
 		  
-		  puzzle.index = 0;
-      cookie->updateLevel(puzzle.level, puzzle.index);
+		puzzle.index = 0;
+        cookie->updateLevel(puzzle.level, puzzle.index);
            
 	  }
 	  
 	  if (puzzleSelect_selectedItem == 0) {
 
 
-      // If all puzzles in the current level are completed, simply re-show the last puzzle ..
-      
-		  puzzle.index = (cookie->getLevelIndex(puzzle.level) == getNumberOfPuzzles(puzzle.level) ? cookie->getLevelIndex(puzzle.level) -1 : cookie->getLevelIndex(puzzle.level));
-		  
+          // If all puzzles in the current level are completed, simply re-show the last puzzle ..
+          
+          if (cookie->getLevelIndex(puzzle.level) == getNumberOfPuzzles(puzzle.level)) {
+      		  puzzle.index = cookie->getLevelIndex(puzzle.level) - 1;
+          }
+          else {
+            cookie->getLevelIndex(puzzle.level);
+          }
+    		  
 	  }
 	  
 	  gameState = STATE_INIT_GAME;
@@ -215,7 +220,12 @@ void Game::puzzleSelect() {
   const char s2[] = {"  Restart Puzzle "};
   const char s3[] = {"    Reset Level"};
 
-  renderPuzzleOption(MENU_QUIT_RESTART_ITEM_X_POS, MENU_QUIT_RESTART_ITEM_1_Y_POS, (prevState == STATE_LEVEL_SELECT ? s1 : s2), (puzzleSelect_selectedItem == 0));
+  if (prevState == STATE_LEVEL_SELECT) {
+    renderPuzzleOption(MENU_QUIT_RESTART_ITEM_X_POS, MENU_QUIT_RESTART_ITEM_1_Y_POS, s1, (puzzleSelect_selectedItem == 0));
+  }
+  else {
+    renderPuzzleOption(MENU_QUIT_RESTART_ITEM_X_POS, MENU_QUIT_RESTART_ITEM_1_Y_POS, s2, (puzzleSelect_selectedItem == 0));
+  }
   renderPuzzleOption(MENU_QUIT_RESTART_ITEM_X_POS, MENU_QUIT_RESTART_ITEM_2_Y_POS, s3, (puzzleSelect_selectedItem == 1));
 
 }
@@ -230,12 +240,12 @@ void Game::renderPuzzleOption(byte x, byte y, const char* message, byte highligh
 	  
     PD::setColor(1);
     PD::fillRect(x - 1, y - 1, MENU_QUIT_RESTART_ITEM_WIDTH, MENU_QUIT_RESTART_ITEM_HEIGHT);
-    PD::setColor(8, 0);
+    PD::setColor(8, 1);
 	  
   }
   else {
 
-    PD::setColor(4, 0);
+    PD::setColor(4, 8);
 
   }
 	
