@@ -74,7 +74,7 @@ void Game::renderBackground() {
 /* ----------------------------------------------------------------------------
  *   Render the board.
  */
-void Game::renderBoard(int xOffset, int yOffset, byte topRow) { 
+void Game::renderBoard(int xOffset, int yOffset, uint8_t topRow) { 
 
 
   // Draw stripey background ..

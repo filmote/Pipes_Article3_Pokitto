@@ -2,7 +2,7 @@
 
 
 // x, y, slider (0 = none), unit
-const byte puzzles_details[] = {
+const uint8_t puzzles_details[] = {
   27, 16, 0, 0,   // 5x5
   21, 10, 0, 0,   // 6x6
   15, 4, 0, 0,    // 7x7
@@ -10,9 +10,9 @@ const byte puzzles_details[] = {
   1, 4, 6, 64,    // 9x9
 };
 
-const byte puzzles_5x5_count = 2;
+const uint8_t puzzles_5x5_count = 2;
 
-const byte puzzles_5x5[] = {
+const uint8_t puzzles_5x5[] = {
 
   0x10, 0x20, 0x40,
   0x00, 0x30, 0x50,
@@ -28,9 +28,9 @@ const byte puzzles_5x5[] = {
 
 };
 
-const byte puzzles_6x6_count = 2;
+const uint8_t puzzles_6x6_count = 2;
 
-const byte puzzles_6x6[] = {
+const uint8_t puzzles_6x6[] = {
 		  
   0x12, 0x30, 0x46,
   0x00, 0x00, 0x50,
@@ -48,9 +48,9 @@ const byte puzzles_6x6[] = {
 
 };
 
-const byte puzzles_7x7_count = 2;
+const uint8_t puzzles_7x7_count = 2;
 
-const byte puzzles_7x7[] = {
+const uint8_t puzzles_7x7[] = {
 		  
   0x00, 0x00, 0x00, 0x10,
   0x00, 0x00, 0x02, 0x30,
@@ -70,9 +70,9 @@ const byte puzzles_7x7[] = {
   
 };
 
-const byte puzzles_8x8_count = 2;
+const uint8_t puzzles_8x8_count = 2;
 
-const byte puzzles_8x8[] = {
+const uint8_t puzzles_8x8[] = {
 		  
   0x00, 0x00, 0x10, 0x00,
   0x00, 0x00, 0x20, 0x34,
@@ -94,9 +94,9 @@ const byte puzzles_8x8[] = {
  
 };
 
-const byte puzzles_9x9_count = 2;  
+const uint8_t puzzles_9x9_count = 2;  
 
-const byte puzzles_9x9[] = {
+const uint8_t puzzles_9x9[] = {
 		  
   0x00, 0x00, 0x00, 0x00, 0x00,
   0x01, 0x23, 0x00, 0x00, 0x00, 
