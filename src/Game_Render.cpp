@@ -74,7 +74,7 @@ void Game::renderBackground() {
 /* ----------------------------------------------------------------------------
  *   Render the board.
  */
-void Game::renderBoard(int xOffset, int yOffset, uint8_t topRow) { 
+void Game::renderBoard(uint8_t xOffset, uint8_t yOffset, uint8_t topRow) { 
 
 
   // Draw stripey background ..
@@ -92,9 +92,9 @@ void Game::renderBoard(int xOffset, int yOffset, uint8_t topRow) {
 
   // Draw placed pipes ..
   
-  for (int y = 0; y < puzzle.maximum.y; y++) {
+  for (uint8_t y = 0; y < puzzle.maximum.y; y++) {
       
-    for (int x = 0; x < puzzle.maximum.x; x++) {
+    for (uint8_t x = 0; x < puzzle.maximum.x; x++) {
       
       if (isPipe(x,y)) {
         
@@ -110,9 +110,9 @@ void Game::renderBoard(int xOffset, int yOffset, uint8_t topRow) {
 
   // Draw placed nodes ..
   
-  for (int y = 0; y < puzzle.maximum.y; y++) {
+  for (uint8_t y = 0; y < puzzle.maximum.y; y++) {
       
-    for (int x = 0; x < puzzle.maximum.x; x++) {
+    for (uint8_t x = 0; x < puzzle.maximum.x; x++) {
       
       if (isNode(x, y)) {
         
@@ -127,9 +127,9 @@ void Game::renderBoard(int xOffset, int yOffset, uint8_t topRow) {
   
   // Draw grid marks ..
   
-  for (int y = 0; y <= puzzle.maximum.y; y++) {
+  for (uint8_t y = 0; y <= puzzle.maximum.y; y++) {
       
-    for (int x = 0; x <= puzzle.maximum.x; x++) { 
+    for (uint8_t x = 0; x <= puzzle.maximum.x; x++) { 
         
       PD::drawPixel((x * GRID_WIDTH) + xOffset, (y * GRID_HEIGHT) + yOffset, 9);
       
